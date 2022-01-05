@@ -1,0 +1,18 @@
+<app-comp-values-table></app-comp-values-table>
+Bills
+<div class="list-group">
+  <div
+    *ngFor="let bill of bills"
+    class="d-flex justify-content-between list-group-item"
+  >
+    <span>{{ bill.name }}</span>
+    <span>{{ bill.value | currency: "BRL" }}</span>
+  </div>
+</div>
+
+<div class="list-group mt-3">
+  <div class="d-flex justify-content-between list-group-item">
+    <span>TOTAL</span>
+    <span>{{ total | currency: "BRL" }}</span>
+  </div>
+</div>
