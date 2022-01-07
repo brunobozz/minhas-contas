@@ -1,17 +1,33 @@
-<app-comp-values-table></app-comp-values-table>
-Bills
-<div class="list-group">
+<!-- <app-comp-values-table></app-comp-values-table> -->
+<h4 class="display-6">Bills - {{ bills.date | date: "MM/YY" }}</h4>
+<div class="d-flex justify-content-between align-itens-center">
+  <button class="btn text-info" (click)="changeMonthPrev()">
+    <i class="fa fa-chevron-left"></i>
+  </button>
+  <div>
+    <i
+      *ngFor="let item of billsList; let i = index"
+      class="fa fa-circle small ms-1 me-1"
+      [ngClass]="{ 'text-info': i === billNumber }"
+    ></i>
+  </div>
+  <button class="btn text-info" (click)="changeMonthNext()">
+    <i class="fa fa-chevron-right"></i>
+  </button>
+</div>
+
+<div class="list-group mb-4">
   <div
-    *ngFor="let bill of bills"
+    *ngFor="let data of bills.data"
     class="d-flex justify-content-between list-group-item"
   >
-    <span>{{ bill.name }}</span>
-    <span>{{ bill.value | currency: "BRL" }}</span>
+    <span>{{ data.name }}</span>
+    <span>{{ data.value | currency: "BRL" }}</span>
   </div>
 </div>
 
 <div class="list-group mt-3">
-  <div class="d-flex justify-content-between list-group-item">
+  <div class="d-flex justify-content-between list-group-item fw-bold">
     <span>TOTAL</span>
     <span>{{ total | currency: "BRL" }}</span>
   </div>

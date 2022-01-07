@@ -8,7 +8,10 @@ import { ServMovkApiService } from 'src/app/services/serv-mock/serv-mock.service
   styleUrls: ['./page-home.component.scss'],
 })
 export class PageHomeComponent implements OnInit {
+  public billsList: any = [];
   public bills: any = [];
+  public billNumber = 0;
+
   public total = 0;
 
   constructor(
@@ -21,16 +24,35 @@ export class PageHomeComponent implements OnInit {
   }
 
   private getBills() {
-    this.apiService.getData('bills/').subscribe(
-      (res: any) => {
-        this.bills = res;
-        this.bills.map((bill: any) => {
-          this.total = this.total + bill.value;
-        });
-      },
-      (err) => {
-        this.toastr.error(err.statusText, 'Error: ' + err.status);
-      }
-    );
+    this.apiService.getData('bills/').subscribe((res: any) => {
+      this.billsList = res;
+      this.bills = this.billsList[this.billNumber];
+      this.totalCalculate();
+    });
+  }
+
+  private totalCalculate() {
+    this.total = 0;
+    this.bills.data.map((bill: any) => {
+      this.total = this.total + bill.value;
+    });
+  }
+
+  public changeMonthPrev() {
+    if (this.billNumber > 0) {
+      this.billNumber--;
+    } else {
+      this.billNumber = this.billsList.length - 1;
+    }
+    this.getBills();
+  }
+
+  public changeMonthNext() {
+    if (this.billNumber + 1 < this.billsList.length) {
+      this.billNumber++;
+    } else {
+      this.billNumber = 0;
+    }
+    this.getBills();
   }
 }

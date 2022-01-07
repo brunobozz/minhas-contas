@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { ChartModule } from 'angular-highcharts';
 
 // COMPONENTS
 import { CompMainHeaderComponent } from './components/comp-main-header/comp-main-header.component';
@@ -30,6 +31,7 @@ import { PageHomeComponent } from './pages/page-home/page-home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ChartModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-right',
