@@ -104,7 +104,60 @@
         },
         {
           "name": "Inter Bruno",
-          "value": 125
+          "value": 100
+        }
+      ]
+    },
+    {
+      "date": "2021-11-1",
+      "data": [
+        {
+          "name": "Escola Caio",
+          "value": 1413
+        },
+        {
+          "name": "Mario Totta Condomínio",
+          "value": 345.99
+        },
+        {
+          "name": "CEEE ",
+          "value": 197.91
+        },
+        {
+          "name": "Internet SC",
+          "value": 104.99
+        },
+        {
+          "name": "Cartão Santander",
+          "value": 1850.71
+        },
+        {
+          "name": "Cartão Nubank",
+          "value": 0
+        },
+        {
+          "name": "Netflix",
+          "value": 55.9
+        },
+        {
+          "name": "Financiamento",
+          "value": 2637.21
+        },
+        {
+          "name": "Condomínio SC",
+          "value": 366.27
+        },
+        {
+          "name": "CELESC",
+          "value": 63.89
+        },
+        {
+          "name": "Internet RS",
+          "value": 125.00
+        },
+        {
+          "name": "Inter Bruno",
+          "value": 100
         }
       ]
     }

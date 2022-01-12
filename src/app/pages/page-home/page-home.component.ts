@@ -26,9 +26,13 @@ export class PageHomeComponent implements OnInit {
   private getBills() {
     this.apiService.getData('bills/').subscribe((res: any) => {
       this.billsList = res;
-      this.bills = this.billsList[this.billNumber];
-      this.totalCalculate();
+      this.getBill();
     });
+  }
+
+  private getBill() {
+    this.bills = this.billsList[this.billNumber];
+    this.totalCalculate();
   }
 
   private totalCalculate() {
@@ -44,7 +48,7 @@ export class PageHomeComponent implements OnInit {
     } else {
       this.billNumber = this.billsList.length - 1;
     }
-    this.getBills();
+    this.getBill();
   }
 
   public changeMonthNext() {
@@ -53,6 +57,6 @@ export class PageHomeComponent implements OnInit {
     } else {
       this.billNumber = 0;
     }
-    this.getBills();
+    this.getBill();
   }
 }
