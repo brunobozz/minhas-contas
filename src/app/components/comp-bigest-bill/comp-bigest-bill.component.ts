@@ -23,8 +23,8 @@ export class CompBigestBillComponent implements OnInit {
 
   constructor(private apiService: ServMovkApiService) {}
 
-  async ngOnInit(): Promise<void> {
-    await this.getBillsList();
+  ngOnInit(): void {
+    this.getBillsList();
   }
 
   async getBillsList() {
@@ -39,9 +39,8 @@ export class CompBigestBillComponent implements OnInit {
       this.bills.map((month: any) => {
         month.data.map((bill: any) => {
           if (bill.value > this.bigestBill.value) {
-            console.log('maior id: ' + bill.id);
             this.bigestBill = {
-              name: this.billsList.find((i: any) => i.id === bill.id).name,
+              name: this.billsList.find((i: any) => i.id == bill.billId).name,
               date: month.date,
               value: bill.value,
             };

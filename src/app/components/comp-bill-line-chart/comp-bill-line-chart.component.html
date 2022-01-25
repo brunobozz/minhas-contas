@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header bg-primary text-light">
+    <i class="fa fa-line-chart"></i>
+    <span> Gráfico por despesa</span>
+  </div>
+  <div class="card-body">
+    <div class="input-group mb-3">
+      <span class="input-group-text">Despesa</span>
+      <select class="form-select" (change)="changeBill($event)">
+        <option *ngFor="let bill of billsList" [value]="bill.id">
+          {{ bill.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="chart">
+      <div class="chart-area1">
+        <div class="chart-area1-a"></div>
+        <div class="chart-area1-b">
+          <div *ngFor="let item of billSelected" class="item-value">
+            {{ item.value }}
+          </div>
+        </div>
+      </div>
+      <div class="chart-area2"></div>
+    </div>
+  </div>
+</div>

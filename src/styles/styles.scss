@@ -1,3 +1,7 @@
+@import "./custom-bootstrap-theme";
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./fonts";
+
 textarea:hover,
 input:hover,
 textarea:active,
@@ -15,4 +19,20 @@ label:focus,
   outline: 0px !important;
   -webkit-appearance: none;
   box-shadow: none !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: $cinza400; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $cinza300; /* color of the scroll thumb */
 }

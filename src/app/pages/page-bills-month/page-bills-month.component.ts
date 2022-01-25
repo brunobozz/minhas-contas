@@ -12,6 +12,7 @@ export class PageBillsMonthComponent implements OnInit {
   public bills: any = [];
   public billsMonth: any = [];
   public billNumber = 0;
+  public monthEdit = true;
 
   public total = 0;
 
@@ -64,6 +65,47 @@ export class PageBillsMonthComponent implements OnInit {
     }
   }
 
+  public addMonth() {
+    let newDate = new Date();
+    let dateString =
+      newDate.getFullYear() +
+      '-' +
+      newDate.getMonth() +
+      1 +
+      '-' +
+      newDate.getDate();
+
+    console.log(dateString);
+    let dataMonth = {
+      date: dateString,
+      data: [],
+    };
+    this.apiService.postData('bills', dataMonth).subscribe(() => {
+      this.toastr.success('Novo mês criado!', 'Feito!!');
+      this.getBills();
+    });
+  }
+
+  public removeMonth(id: number, month: string) {
+    if (confirm('Tem certeza que deseja apagar o mês ' + month + '?')) {
+      this.apiService.deleteData('bills', id).subscribe(() => {
+        this.toastr.error('Mês removido!', 'Feito!!');
+        this.getBills();
+        this.changeMonthTo(id - 1);
+      });
+    }
+  }
+
+  public saveMonth(value: any) {
+    this.billsMonth.date = value;
+    this.saveList();
+  }
+
+  public changeMonthTo(id: number) {
+    this.billNumber = id;
+    this.getBillMonth();
+  }
+
   public changeMonthPrev() {
     if (this.billNumber > 0) {
       this.billNumber--;
@@ -104,8 +146,12 @@ export class PageBillsMonthComponent implements OnInit {
     newVal = newVal.replace('R$', '').replace(',', '');
     newVal = parseFloat(newVal);
 
-    this.billsMonth.data.find((item: any) => item.id == id).value = newVal;
-    this.saveList();
+    if (
+      this.billsMonth.data.find((item: any) => item.id == id).value !== newVal
+    ) {
+      this.billsMonth.data.find((item: any) => item.id == id).value = newVal;
+      this.saveList();
+    }
   }
 
   private saveList() {

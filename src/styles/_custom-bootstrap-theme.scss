@@ -1,0 +1,28 @@
+@import "./variables";
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "info": $info,
+  "warning": $warning,
+);
+
+$custom-colors: (
+  //cinzas
+  "preto": $preto,
+  "cinza200": $cinza200,
+  "cinza300": $cinza300,
+  "cinza400": $cinza400,
+  "branco": $branco
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// radio buttom color
+$component-active-bg: $secondary;
+
+// accordion colors
+$accordion-button-active-bg: $primary;
+$accordion-button-active-color: $primary;
