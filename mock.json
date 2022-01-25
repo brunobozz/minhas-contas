@@ -400,6 +400,72 @@
           "value": 1350,
           "id": 0,
           "name": "Escola Caio"
+        },
+        {
+          "billId": "1",
+          "value": 1,
+          "id": 1,
+          "name": "RS Condomínio"
+        },
+        {
+          "billId": "2",
+          "value": 1,
+          "id": 2,
+          "name": "RS CEEE"
+        },
+        {
+          "billId": "10",
+          "value": 1,
+          "id": 3,
+          "name": "RS Internet"
+        },
+        {
+          "billId": "7",
+          "value": 1,
+          "id": 4,
+          "name": "SC Financiamento"
+        },
+        {
+          "billId": "8",
+          "value": 1,
+          "id": 5,
+          "name": "SC Condomínio"
+        },
+        {
+          "billId": "9",
+          "value": 1,
+          "id": 6,
+          "name": "SC CELESC"
+        },
+        {
+          "billId": "3",
+          "value": 1,
+          "id": 7,
+          "name": "Internet SC"
+        },
+        {
+          "billId": "4",
+          "value": 1,
+          "id": 8,
+          "name": "Cartão Santander"
+        },
+        {
+          "billId": "5",
+          "value": 1,
+          "id": 9,
+          "name": "Cartão Nubank"
+        },
+        {
+          "billId": "11",
+          "value": 1,
+          "id": 10,
+          "name": "Inter Bruno"
+        },
+        {
+          "billId": "14",
+          "value": 1,
+          "id": 11,
+          "name": "TV Magazine Luiza"
         }
       ],
       "id": 4

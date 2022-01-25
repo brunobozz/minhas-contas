@@ -81,7 +81,7 @@ export class PageBillsMonthComponent implements OnInit {
       data: [],
     };
     this.apiService.postData('bills', dataMonth).subscribe(() => {
-      this.toastr.success('Novo mês criado!', 'Feito!!');
+      this.toastr.success('Novo mês criado!');
       this.getBills();
     });
   }
@@ -89,7 +89,7 @@ export class PageBillsMonthComponent implements OnInit {
   public removeMonth(id: number, month: string) {
     if (confirm('Tem certeza que deseja apagar o mês ' + month + '?')) {
       this.apiService.deleteData('bills', id).subscribe(() => {
-        this.toastr.error('Mês removido!', 'Feito!!');
+        this.toastr.error('Mês removido!');
         this.getBills();
         this.changeMonthTo(id - 1);
       });
@@ -131,7 +131,7 @@ export class PageBillsMonthComponent implements OnInit {
         newId = res.id + 1;
       }
     });
-    let val = { billId: null, value: '0', id: newId };
+    let val = { billId: null, value: 0, id: newId };
     this.billsMonth.data.push(val);
   }
 
@@ -158,7 +158,7 @@ export class PageBillsMonthComponent implements OnInit {
     this.apiService
       .patchData('bills/', this.billNumber, this.billsMonth)
       .subscribe(() => {
-        this.toastr.success('Lista atualizada!', 'Feito!!');
+        this.toastr.success('Lista atualizada!');
         this.getBills();
       });
   }

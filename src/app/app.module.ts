@@ -18,6 +18,8 @@ import { CompValuesTableComponent } from './components/comp-values-table/comp-va
 import { CompContentHeaderComponent } from './components/comp-content-header/comp-content-header.component';
 import { CompBigestBillComponent } from './components/comp-bigest-bill/comp-bigest-bill.component';
 import { CompBillLineChartComponent } from './components/comp-bill-line-chart/comp-bill-line-chart.component';
+import { CompMainFooterComponent } from './components/comp-main-footer/comp-main-footer.component';
+import { CompRouterButtonsComponent } from './components/comp-router-buttons/comp-router-buttons.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: true,
@@ -37,6 +39,8 @@ const maskConfig: Partial<IConfig> = {
     CompContentHeaderComponent,
     CompBigestBillComponent,
     CompBillLineChartComponent,
+    CompMainFooterComponent,
+    CompRouterButtonsComponent,
   ],
   imports: [
     BrowserModule,

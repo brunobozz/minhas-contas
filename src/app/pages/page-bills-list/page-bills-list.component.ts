@@ -28,7 +28,7 @@ export class PageBillsListComponent implements OnInit {
   public addBill() {
     let val = { name: 'NOVA DESPESA' };
     this.apiService.postData('bills-list', val).subscribe(() => {
-      this.toastr.success('Novo item adicionado!', 'Feito!!');
+      this.toastr.success('Novo item adicionado!');
       this.getBillsList();
     });
   }
@@ -36,7 +36,7 @@ export class PageBillsListComponent implements OnInit {
   public deleteItem(id: number, name: string) {
     if (confirm('Tem certeza que deseja apagar a conta ' + name + '?')) {
       this.apiService.deleteData('bills-list', id).subscribe(() => {
-        this.toastr.error('Item apagado!', 'Se foi!!');
+        this.toastr.error('Item apagado!');
         this.getBillsList();
       });
     }
@@ -51,7 +51,7 @@ export class PageBillsListComponent implements OnInit {
       };
 
       this.apiService.patchData('bills-list', id, value).subscribe(() => {
-        this.toastr.success('Lista atualizada!', 'Feito!!');
+        this.toastr.success('Lista atualizada!');
         this.getBillsList();
       });
     }

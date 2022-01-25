@@ -8,6 +8,16 @@ import { ServMovkApiService } from 'src/app/services/serv-mock/serv-mock.service
 })
 export class PageHomeComponent implements OnInit {
   public bills: any;
+  public routes: any = [
+    {
+      name: 'Lista de Despesas',
+      path: '/despesas/lista',
+    },
+    {
+      name: 'Contas por Mês',
+      path: '/despesas/mes',
+    },
+  ];
 
   constructor(private apiService: ServMovkApiService) {}
 
