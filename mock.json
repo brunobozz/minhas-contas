@@ -1,165 +1,402 @@
 {
-  "bills-list": [],
-
+  "bills-list": [
+    {
+      "name": "Escola Caio",
+      "id": 0
+    },
+    {
+      "name": "Mario Totta Condomínio",
+      "id": 1
+    },
+    {
+      "name": "CEEE",
+      "id": 2
+    },
+    {
+      "name": "Internet SC",
+      "id": 3
+    },
+    {
+      "name": "Cartão Santander",
+      "id": 4
+    },
+    {
+      "name": "Cartão Nubank",
+      "id": 5
+    },
+    {
+      "name": "Netflix",
+      "id": 6
+    },
+    {
+      "name": "Financiamento Ingleses",
+      "id": 7
+    },
+    {
+      "name": "Condomínio SC",
+      "id": 8
+    },
+    {
+      "name": "CELESC",
+      "id": 9
+    },
+    {
+      "name": "Internet RS",
+      "id": 10
+    },
+    {
+      "name": "Inter Bruno",
+      "id": 11
+    },
+    {
+      "name": "Inter Caio",
+      "id": 13
+    },
+    {
+      "name": "TV Magazine Luiza",
+      "id": 14
+    },
+    {
+      "name": "Inter Benja",
+      "id": 15
+    }
+  ],
   "bills": [
     {
       "date": "2021-9-1",
       "data": [
         {
-          "name": "Escola Caio",
-          "value": 1413
+          "billId": "0",
+          "value": 1413,
+          "id": 0,
+          "name": "Escola Caio"
         },
         {
-          "name": "Mario Totta Condomínio",
-          "value": 345
+          "billId": "1",
+          "value": 345,
+          "id": 1,
+          "name": "Mario Totta Condomínio"
         },
         {
-          "name": "CEEE ",
-          "value": 174.53
+          "billId": "2",
+          "value": 174.53,
+          "id": 2,
+          "name": "CEEE"
         },
         {
-          "name": "Internet SC",
-          "value": 0
+          "billId": "3",
+          "value": 0,
+          "id": 3,
+          "name": "Internet SC"
         },
         {
-          "name": "Cartão Santander",
-          "value": 595.62
+          "billId": "4",
+          "value": 595.62,
+          "id": 4,
+          "name": "Cartão Santander"
         },
         {
-          "name": "Cartão Nubank",
-          "value": 32.75
+          "billId": "5",
+          "value": 32.75,
+          "id": 5,
+          "name": "Cartão Nubank"
         },
         {
-          "name": "Netflix",
-          "value": 55.9
+          "billId": "6",
+          "value": 55.9,
+          "id": 6,
+          "name": "Netflix"
         },
         {
-          "name": "Financiamento",
-          "value": 2637.21
+          "billId": "7",
+          "value": 2637.21,
+          "id": 7,
+          "name": "Financiamento Ingleses2"
         },
         {
-          "name": "Condomínio SC",
-          "value": 426.27
+          "billId": "8",
+          "value": 426.27,
+          "id": 8,
+          "name": "Condomínio SC"
         },
         {
-          "name": "CELESC",
-          "value": 39.58
+          "billId": "9",
+          "value": 39.58,
+          "id": 9,
+          "name": "CELESC"
         },
         {
-          "name": "Internet RS",
-          "value": 125
+          "billId": "10",
+          "value": 125,
+          "id": 10,
+          "name": "Internet RS"
         },
         {
-          "name": "Inter Bruno",
-          "value": 125
+          "billId": "11",
+          "value": 125.2,
+          "id": 11,
+          "name": "Inter Bruno"
         }
-      ]
+      ],
+      "id": 0
     },
     {
       "date": "2021-10-1",
       "data": [
         {
-          "name": "Escola Caio",
-          "value": 1413
+          "billId": "0",
+          "value": 1413,
+          "id": 0,
+          "name": "Escola Caio"
         },
         {
-          "name": "Mario Totta Condomínio",
-          "value": 345.99
+          "billId": "1",
+          "value": 345.99,
+          "id": 1,
+          "name": "Mario Totta Condomínio"
         },
         {
-          "name": "CEEE ",
-          "value": 269.6
+          "billId": "2",
+          "value": 269.6,
+          "id": 2,
+          "name": "CEEE"
         },
         {
-          "name": "Internet SC",
-          "value": 136
+          "billId": "3",
+          "value": 136,
+          "id": 3,
+          "name": "Internet SC"
         },
         {
-          "name": "Cartão Santander",
-          "value": 0
+          "billId": "4",
+          "value": 0,
+          "id": 4,
+          "name": "Cartão Santander"
         },
         {
-          "name": "Cartão Nubank",
-          "value": 0
+          "billId": "5",
+          "value": 0,
+          "id": 5,
+          "name": "Cartão Nubank"
         },
         {
-          "name": "Netflix",
-          "value": 55.9
+          "billId": "6",
+          "value": 55.9,
+          "id": 6,
+          "name": "Netflix"
         },
         {
-          "name": "Financiamento",
-          "value": 2637.21
+          "billId": "7",
+          "value": 2637.21,
+          "id": 7,
+          "name": "Financiamento Ingleses"
         },
         {
-          "name": "Condomínio SC",
-          "value": 386.12
+          "billId": "8",
+          "value": 386.12,
+          "id": 8,
+          "name": "Condomínio SC"
         },
         {
-          "name": "CELESC",
-          "value": 88.37
+          "billId": "9",
+          "value": 88.37,
+          "id": 9,
+          "name": "CELESC"
         },
         {
-          "name": "Internet RS",
-          "value": 125
+          "billId": "10",
+          "value": 125,
+          "id": 10,
+          "name": "Internet RS"
         },
         {
-          "name": "Inter Bruno",
-          "value": 100
+          "billId": "11",
+          "value": 100,
+          "id": 11,
+          "name": "Inter Crianças"
         }
-      ]
+      ],
+      "id": 1
     },
     {
       "date": "2021-11-1",
       "data": [
         {
-          "name": "Escola Caio",
-          "value": 1413
+          "billId": "0",
+          "value": 1413,
+          "id": 0,
+          "name": "Escola Caio"
         },
         {
-          "name": "Mario Totta Condomínio",
-          "value": 345.99
+          "billId": "1",
+          "value": 345.99,
+          "id": 1,
+          "name": "Mario Totta Condomínio"
         },
         {
-          "name": "CEEE ",
-          "value": 197.91
+          "billId": "2",
+          "value": 197.91,
+          "id": 2,
+          "name": "CEEE"
         },
         {
-          "name": "Internet SC",
-          "value": 104.99
+          "billId": "3",
+          "value": 104.99,
+          "id": 3,
+          "name": "Internet SC"
         },
         {
-          "name": "Cartão Santander",
-          "value": 1850.71
+          "billId": "4",
+          "value": 1850.71,
+          "id": 4,
+          "name": "Cartão Santander"
         },
         {
-          "name": "Cartão Nubank",
-          "value": 0
+          "billId": "5",
+          "value": 0,
+          "id": 5,
+          "name": "Cartão Nubank"
         },
         {
-          "name": "Netflix",
-          "value": 55.9
+          "billId": "6",
+          "value": 55.9,
+          "id": 6,
+          "name": "Netflix"
         },
         {
-          "name": "Financiamento",
-          "value": 2637.21
+          "billId": "7",
+          "value": 2637.21,
+          "id": 7,
+          "name": "Financiamento Ingleses"
         },
         {
-          "name": "Condomínio SC",
-          "value": 366.27
+          "billId": "8",
+          "value": 366.27,
+          "id": 8,
+          "name": "Condomínio SC"
         },
         {
-          "name": "CELESC",
-          "value": 63.89
+          "billId": "9",
+          "value": 63.89,
+          "id": 9,
+          "name": "CELESC"
         },
         {
-          "name": "Internet RS",
-          "value": 125.00
+          "billId": "10",
+          "value": 125,
+          "id": 10,
+          "name": "Internet RS"
         },
         {
-          "name": "Inter Bruno",
-          "value": 100
+          "billId": "11",
+          "value": 100,
+          "id": 11,
+          "name": "Inter Bruno"
+        },
+        {
+          "billId": "14",
+          "value": 187.39,
+          "id": 12,
+          "name": "TV Magazine Luiza"
         }
-      ]
+      ],
+      "id": 2
+    },
+    {
+      "date": "2021-12-1",
+      "data": [
+        {
+          "billId": "0",
+          "value": 1380,
+          "id": 0,
+          "name": "Escola Caio"
+        },
+        {
+          "billId": "1",
+          "value": 345.99,
+          "id": 1,
+          "name": "Mario Totta Condomínio"
+        },
+        {
+          "billId": "2",
+          "value": 316.81,
+          "id": 2,
+          "name": "CEEE"
+        },
+        {
+          "billId": "10",
+          "value": 125,
+          "id": 3,
+          "name": "Internet RS"
+        },
+        {
+          "billId": "6",
+          "value": 55.9,
+          "id": 4,
+          "name": "Netflix"
+        },
+        {
+          "billId": "4",
+          "value": 2409.35,
+          "id": 5,
+          "name": "Cartão Santander"
+        },
+        {
+          "billId": "5",
+          "value": 2542.19,
+          "id": 6,
+          "name": "Cartão Nubank"
+        },
+        {
+          "billId": "8",
+          "value": 402.05,
+          "id": 7,
+          "name": "Condomínio SC"
+        },
+        {
+          "billId": "9",
+          "value": 266.09,
+          "id": 8,
+          "name": "CELESC"
+        },
+        {
+          "billId": "3",
+          "value": 105,
+          "id": 9,
+          "name": "Internet SC"
+        },
+        {
+          "billId": "11",
+          "value": 100,
+          "id": 10,
+          "name": "Inter Bruno"
+        },
+        {
+          "billId": "15",
+          "value": 75,
+          "id": 11,
+          "name": "Inter Benja"
+        },
+        {
+          "billId": "13",
+          "value": 75,
+          "id": 12,
+          "name": "Inter Caio"
+        },
+        {
+          "billId": "14",
+          "value": 187.39,
+          "id": 13,
+          "name": "TV Magazine Luiza"
+        },
+        {
+          "billId": "7",
+          "value": 2900,
+          "id": 14,
+          "name": "Financiamento Ingleses"
+        }
+      ],
+      "id": 3
     }
   ]
 }

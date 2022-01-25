@@ -13,4 +13,16 @@ export class ServMovkApiService {
   public getData(endPoint: string) {
     return this.http.get(this.API_PREFIX + endPoint);
   }
+
+  public postData(area: string, data: any) {
+    return this.http.post(this.API_PREFIX + area, data);
+  }
+
+  public deleteData(endPoint: string, id: number) {
+    return this.http.delete(this.API_PREFIX + endPoint + '/' + id);
+  }
+
+  public patchData(endPoint: string, id: number, data: any) {
+    return this.http.patch(this.API_PREFIX + endPoint + '/' + id, data);
+  }
 }

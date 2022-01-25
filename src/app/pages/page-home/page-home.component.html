@@ -1,34 +1,13 @@
-<!-- <app-comp-values-table></app-comp-values-table> -->
-<h4 class="display-6">Bills - {{ bills.date | date: "YYYY/MM" }}</h4>
-<div class="d-flex justify-content-between align-items-center">
-  <button class="btn text-info" (click)="changeMonthPrev()">
-    <i class="fa fa-chevron-left"></i>
-  </button>
-  <div class="d-flex justify-content-between align-items-center">
-    <i
-      *ngFor="let item of billsList; let i = index"
-      class="fa fa-circle small ms-1 me-1"
-      [ngClass]="{ 'text-info': i === billNumber }"
-    ></i>
-  </div>
-  <button class="btn text-info" (click)="changeMonthNext()">
-    <i class="fa fa-chevron-right"></i>
-  </button>
-</div>
+<app-comp-content-header title1="Home"></app-comp-content-header>
 
-<div class="list-group mb-4">
-  <div
-    *ngFor="let data of bills.data"
-    class="d-flex justify-content-between list-group-item"
-  >
-    <span>{{ data.name }}</span>
-    <span>{{ data.value | currency: "BRL" }}</span>
+<div class="row">
+  <div class="col-md-4">
+    <app-comp-bigest-bill [bills]="bills"></app-comp-bigest-bill>
   </div>
-</div>
-
-<div class="list-group mt-3">
-  <div class="d-flex justify-content-between list-group-item fw-bold">
-    <span>TOTAL</span>
-    <span>{{ total | currency: "BRL" }}</span>
+  <div class="col-md-4">
+    <app-comp-bigest-bill [bills]="bills"></app-comp-bigest-bill>
+  </div>
+  <div class="col-md-4">
+    <app-comp-bigest-bill [bills]="bills"></app-comp-bigest-bill>
   </div>
 </div>
