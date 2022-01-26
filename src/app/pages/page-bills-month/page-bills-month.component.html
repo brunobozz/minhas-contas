@@ -35,28 +35,33 @@
       </div>
       <button
         *ngIf="monthEdit"
-        class="btn btn-info text-light ms-2"
+        class="btn btn-primary text-light ms-2"
         (click)="monthEdit = false"
       >
         <i class="fa fa-pencil"></i>
       </button>
       <button
         *ngIf="!monthEdit"
-        class="btn btn-info text-light ms-2"
+        class="btn btn-primary text-light ms-2"
         (click)="saveMonth(month.value); monthEdit = true"
       >
         <i class="fa fa-save"></i>
       </button>
+
       <button class="btn btn-success text-light ms-2" (click)="addMonth()">
         <i class="fa fa-plus"></i>
       </button>
       <button
         class="btn btn-danger text-light ms-2"
         (click)="removeMonth(billsMonth.id, billsMonth.date)"
+        *ngIf="!monthEdit"
       >
         <i class="fa fa-trash"></i>
       </button>
     </div>
+  </div>
+  <div *ngIf="billsMonth.data.length == 0" class="list-group-item text-center">
+    <span>Sem contas por enquanto... Adicione uma!</span>
   </div>
   <div
     *ngFor="let data of billsMonth.data"
@@ -68,7 +73,7 @@
         style="border: 0; padding: 0"
         (change)="changeBill($event, data.id)"
       >
-        <option selected>--</option>
+        <option selected>Selecione a despesa</option>
         <option
           *ngFor="let bill of billsList"
           [value]="bill.id"

@@ -393,7 +393,7 @@
       "id": 3
     },
     {
-      "date": "2022-01-25",
+      "date": "2022/01",
       "data": [
         {
           "billId": "0",
@@ -469,6 +469,47 @@
         }
       ],
       "id": 4
+    },
+    {
+      "date": "2020/01",
+      "data": [
+        {
+          "billId": "3",
+          "value": 0,
+          "id": 0,
+          "name": "Internet SC"
+        },
+        {
+          "billId": "1",
+          "value": 0,
+          "id": 1,
+          "name": "RS Condomínio"
+        },
+        {
+          "billId": "11",
+          "value": 0,
+          "id": 2,
+          "name": "Inter Bruno"
+        },
+        {
+          "billId": "3",
+          "value": 0,
+          "id": 3,
+          "name": "Internet SC"
+        },
+        {
+          "billId": null,
+          "value": 0,
+          "id": 4
+        },
+        {
+          "billId": "5",
+          "value": 0,
+          "id": 5,
+          "name": "Cartão Nubank"
+        }
+      ],
+      "id": 5
     }
   ]
 }
