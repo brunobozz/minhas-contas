@@ -1,10 +1,4 @@
-import {
-  AfterContentChecked,
-  AfterViewInit,
-  Component,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ServMovkApiService } from 'src/app/services/serv-mock/serv-mock.service';
 
 @Component({

@@ -20,6 +20,7 @@ import { CompBigestBillComponent } from './components/comp-bigest-bill/comp-bige
 import { CompBillLineChartComponent } from './components/comp-bill-line-chart/comp-bill-line-chart.component';
 import { CompMainFooterComponent } from './components/comp-main-footer/comp-main-footer.component';
 import { CompRouterButtonsComponent } from './components/comp-router-buttons/comp-router-buttons.component';
+import { CompMonthResumeComponent } from './components/comp-month-resume/comp-month-resume.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: true,
@@ -41,6 +42,7 @@ const maskConfig: Partial<IConfig> = {
     CompBillLineChartComponent,
     CompMainFooterComponent,
     CompRouterButtonsComponent,
+    CompMonthResumeComponent,
   ],
   imports: [
     BrowserModule,

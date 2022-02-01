@@ -29,7 +29,8 @@
           #month
           class="form-control text-end"
           type="text"
-          [readonly]="monthEdit"
+          mask="9999/99"
+          [readonly]="!monthEdit"
           [value]="billsMonth.date | date: 'YYYY/MM'"
         />
       </div>

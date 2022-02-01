@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header text-light bg-primary">
+    <i class="fa fa-calendar"></i>
+    <span> Resumo {{ today | date: "MM/YYYY" }}</span>
+  </div>
+  <div class="list-group list-group-flush">
+    <div
+      *ngFor="let bill of billsMonth.slice(1, 4)"
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <span>{{ bill.name }}</span>
+      <span>{{ bill.value | currency: "BRL" }}</span>
+    </div>
+    <div
+      class="list-group-item d-flex justify-content-center align-items-center cursor-pointer text-primary"
+    >
+      Mostrar todos...
+    </div>
+    <div
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <span>TOTAL</span>
+      <span class="fw-bold">{{ total | currency: "BRL" }}</span>
+    </div>
+  </div>
+</div>

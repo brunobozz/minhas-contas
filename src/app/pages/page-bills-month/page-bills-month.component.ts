@@ -66,16 +66,11 @@ export class PageBillsMonthComponent implements OnInit {
   }
 
   public addMonth() {
-    let newDate = new Date();
-    let dateString =
-      newDate.getFullYear() +
-      '-' +
-      newDate.getMonth() +
-      1 +
-      '-' +
-      newDate.getDate();
+    let today = new Date();
+    let month: number = +today.getMonth();
+    console.log(month);
+    let dateString = today.getFullYear() + '/' + month + 1;
 
-    console.log(dateString);
     let dataMonth = {
       date: dateString,
       data: [],
