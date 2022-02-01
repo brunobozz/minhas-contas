@@ -1,13 +1,9 @@
-<div class="mb-3">
-  <app-comp-router-buttons [routes]="routes"></app-comp-router-buttons>
-</div>
-
 <div class="row">
-  <div class="col-md-8 col-sm-12">
+  <div class="col-lg-8 col-md-7 col-sm-12 d-grid gap-4">
     <app-comp-bill-line-chart></app-comp-bill-line-chart>
-  </div>
-  <div class="col-md-4 col-sm-12 d-grid gap-4">
     <app-comp-bigest-bill [bills]="bills"></app-comp-bigest-bill>
+  </div>
+  <div class="col-lg-4 col-md-5 col-sm-12 d-grid gap-4">
     <app-comp-month-resume></app-comp-month-resume>
   </div>
 </div>

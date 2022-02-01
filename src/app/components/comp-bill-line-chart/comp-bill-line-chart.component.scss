@@ -1,26 +1,73 @@
+@import "../../../styles/variables";
+
 .chart {
+  margin-top: 20px;
+  position: relative;
   height: 300px;
-  background-color: aliceblue;
 
   &-area1 {
+    position: relative;
+    z-index: 100;
     height: calc(100% - 30px);
     width: 100%;
     display: flex;
     &-a {
-      background-color: burlywood;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
       height: 100%;
       width: 30px;
     }
     &-b {
-      background-color: chocolate;
+      position: relative;
+      // overflow: visible;
       height: 100%;
       width: calc(100% - 30px);
+
+      .item-value {
+        position: absolute;
+        display: block;
+        margin-top: -15px;
+        margin-left: -4px;
+        font-size: 10px;
+
+        &::before {
+          float: left;
+          margin-right: 5px;
+          margin-top: 12px;
+          height: 8px;
+          width: 8px;
+          display: block;
+          background-color: $primary;
+          border-radius: 50%;
+          content: "";
+        }
+      }
     }
   }
   &-area2 {
-    background-color: darkslategrey;
-    width: calc(100% - 30px);
-    margin-left: 30px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    width: calc(100% - 29px);
+    margin-left: 29px;
     height: 30px;
+
+    .item-month {
+      position: absolute;
+      font-size: 10px;
+      font-weight: bold;
+      margin-left: 5px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        margin-left: -5px;
+        height: 5px;
+        width: 1px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
   }
 }

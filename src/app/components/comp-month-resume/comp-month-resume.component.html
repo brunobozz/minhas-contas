@@ -5,17 +5,17 @@
   </div>
   <div class="list-group list-group-flush">
     <div
-      *ngFor="let bill of billsMonth.slice(1, 4)"
+      *ngFor="let bill of billsMonth.slice(1, 20)"
       class="list-group-item d-flex justify-content-between align-items-center"
     >
       <span>{{ bill.name }}</span>
       <span>{{ bill.value | currency: "BRL" }}</span>
     </div>
-    <div
+    <!-- <div
       class="list-group-item d-flex justify-content-center align-items-center cursor-pointer text-primary"
     >
       Mostrar todos...
-    </div>
+    </div> -->
     <div
       class="list-group-item d-flex justify-content-between align-items-center"
     >

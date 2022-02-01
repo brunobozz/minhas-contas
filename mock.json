@@ -159,7 +159,7 @@
           "billId": "3",
           "value": 136,
           "id": 3,
-          "name": "Internet SC"
+          "name": "SC Internet"
         },
         {
           "billId": "4",
@@ -169,7 +169,7 @@
         },
         {
           "billId": "5",
-          "value": 0,
+          "value": 248.64,
           "id": 5,
           "name": "Cartão Nubank"
         },
@@ -478,6 +478,18 @@
           "value": 2643.89,
           "id": 0,
           "name": "SC Financiamento"
+        },
+        {
+          "billId": "2",
+          "value": 433.09,
+          "id": 1,
+          "name": "RS CEEE"
+        },
+        {
+          "billId": "5",
+          "value": 121.84,
+          "id": 2,
+          "name": "Cartão Nubank"
         }
       ],
       "id": 5

@@ -4,7 +4,7 @@
     <span> Gráfico por despesa</span>
   </div>
   <div class="card-body">
-    <div class="input-group mb-3">
+    <div class="input-group mb-4">
       <span class="input-group-text">Despesa</span>
       <select class="form-select" (change)="changeBill($event)">
         <option *ngFor="let bill of billsList" [value]="bill.id">
@@ -17,12 +17,31 @@
       <div class="chart-area1">
         <div class="chart-area1-a"></div>
         <div class="chart-area1-b">
-          <div *ngFor="let item of billSelected" class="item-value">
-            {{ item.value }}
+          <div
+            *ngFor="let item of billSelected"
+            class="item-value"
+            [style.left]="item.posX + '%'"
+            [style.top]="item.posY + '%'"
+          >
+            {{ item.value | currency: "BRL" }}
           </div>
         </div>
       </div>
-      <div class="chart-area2"></div>
+      <div class="chart-area2">
+        <div
+          *ngFor="let item of billSelected"
+          class="item-month"
+          [style.left]="item.posX + '%'"
+        >
+          {{ item.date }}
+        </div>
+      </div>
     </div>
+  </div>
+  <div
+    class="card-footer d-flex justify-content-between align-intems-center fw-bold"
+  >
+    <span>Total</span>
+    <span>{{ total | currency: "BRL" }}</span>
   </div>
 </div>
