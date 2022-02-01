@@ -13,7 +13,7 @@
       "id": 2
     },
     {
-      "name": "Internet SC",
+      "name": "SC Internet",
       "id": 3
     },
     {
@@ -85,7 +85,7 @@
         },
         {
           "billId": "4",
-          "value": 594.62,
+          "value": 2229.39,
           "id": 4,
           "name": "Cartão Santander"
         },
@@ -103,7 +103,7 @@
         },
         {
           "billId": "7",
-          "value": 2637.21,
+          "value": 0,
           "id": 7,
           "name": "SC Financiamento"
         },
@@ -115,7 +115,7 @@
         },
         {
           "billId": "9",
-          "value": 39.58,
+          "value": 117.74,
           "id": 9,
           "name": "SC CELESC"
         },
@@ -181,7 +181,7 @@
         },
         {
           "billId": "7",
-          "value": 2637.21,
+          "value": 2646.97,
           "id": 7,
           "name": "SC Financiamento"
         },
@@ -225,13 +225,13 @@
           "billId": "1",
           "value": 345.99,
           "id": 1,
-          "name": "Mario Totta Condomínio"
+          "name": "RS Condomínio"
         },
         {
           "billId": "2",
           "value": 197.91,
           "id": 2,
-          "name": "CEEE"
+          "name": "RS CEEE"
         },
         {
           "billId": "3",
@@ -259,27 +259,27 @@
         },
         {
           "billId": "7",
-          "value": 2637.21,
+          "value": 2651.47,
           "id": 7,
-          "name": "Financiamento Ingleses"
+          "name": "SC Financiamento"
         },
         {
           "billId": "8",
           "value": 366.27,
           "id": 8,
-          "name": "Condomínio SC"
+          "name": "SC Condomínio"
         },
         {
           "billId": "9",
           "value": 63.89,
           "id": 9,
-          "name": "CELESC"
+          "name": "SC CELESC"
         },
         {
           "billId": "10",
           "value": 125,
           "id": 10,
-          "name": "Internet RS"
+          "name": "RS Internet"
         },
         {
           "billId": "11",
@@ -379,7 +379,7 @@
         },
         {
           "billId": "7",
-          "value": 2637,
+          "value": 2637.21,
           "id": 14,
           "name": "SC Financiamento"
         },
@@ -393,77 +393,77 @@
       "id": 3
     },
     {
-      "date": "2022/01",
+      "date": "2021/01",
       "data": [
         {
           "billId": "0",
-          "value": 1350,
+          "value": 1380,
           "id": 0,
           "name": "Escola Caio"
         },
         {
           "billId": "1",
-          "value": 1,
+          "value": 345.99,
           "id": 1,
           "name": "RS Condomínio"
         },
         {
           "billId": "2",
-          "value": 1,
+          "value": 384.14,
           "id": 2,
           "name": "RS CEEE"
         },
         {
           "billId": "10",
-          "value": 1,
+          "value": 119.13,
           "id": 3,
           "name": "RS Internet"
         },
         {
           "billId": "7",
-          "value": 1,
+          "value": 0,
           "id": 4,
           "name": "SC Financiamento"
         },
         {
           "billId": "8",
-          "value": 1,
+          "value": 470.24,
           "id": 5,
           "name": "SC Condomínio"
         },
         {
           "billId": "9",
-          "value": 1,
+          "value": 117.74,
           "id": 6,
           "name": "SC CELESC"
         },
         {
           "billId": "3",
-          "value": 1,
+          "value": 104.99,
           "id": 7,
-          "name": "Internet SC"
+          "name": "SC Internet"
         },
         {
           "billId": "4",
-          "value": 1,
+          "value": 2229.39,
           "id": 8,
           "name": "Cartão Santander"
         },
         {
           "billId": "5",
-          "value": 1,
+          "value": 159.29,
           "id": 9,
           "name": "Cartão Nubank"
         },
         {
           "billId": "11",
-          "value": 1,
+          "value": 100,
           "id": 10,
           "name": "Inter Bruno"
         },
         {
           "billId": "14",
-          "value": 1,
+          "value": 187.39,
           "id": 11,
           "name": "TV Magazine Luiza"
         }
@@ -471,42 +471,13 @@
       "id": 4
     },
     {
-      "date": "2020/01",
+      "date": "2022/01",
       "data": [
         {
-          "billId": "3",
-          "value": 0,
+          "billId": "7",
+          "value": 2643.89,
           "id": 0,
-          "name": "Internet SC"
-        },
-        {
-          "billId": "1",
-          "value": 0,
-          "id": 1,
-          "name": "RS Condomínio"
-        },
-        {
-          "billId": "11",
-          "value": 0,
-          "id": 2,
-          "name": "Inter Bruno"
-        },
-        {
-          "billId": "3",
-          "value": 0,
-          "id": 3,
-          "name": "Internet SC"
-        },
-        {
-          "billId": null,
-          "value": 0,
-          "id": 4
-        },
-        {
-          "billId": "5",
-          "value": 0,
-          "id": 5,
-          "name": "Cartão Nubank"
+          "name": "SC Financiamento"
         }
       ],
       "id": 5

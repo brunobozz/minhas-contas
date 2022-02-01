@@ -12,7 +12,7 @@ export class PageBillsMonthComponent implements OnInit {
   public bills: any = [];
   public billsMonth: any = [];
   public billNumber = 0;
-  public monthEdit = true;
+  public monthEdit = false;
 
   public total = 0;
 
@@ -92,6 +92,7 @@ export class PageBillsMonthComponent implements OnInit {
         this.toastr.error('Mês removido!');
         this.getBills();
         this.changeMonthTo(id - 1);
+        this.monthEdit = false;
       });
     }
   }

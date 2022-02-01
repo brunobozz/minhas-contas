@@ -34,16 +34,16 @@
         />
       </div>
       <button
-        *ngIf="monthEdit"
+        *ngIf="!monthEdit"
         class="btn btn-primary text-light ms-2"
-        (click)="monthEdit = false"
+        (click)="monthEdit = true"
       >
         <i class="fa fa-pencil"></i>
       </button>
       <button
-        *ngIf="!monthEdit"
+        *ngIf="monthEdit"
         class="btn btn-primary text-light ms-2"
-        (click)="saveMonth(month.value); monthEdit = true"
+        (click)="saveMonth(month.value); monthEdit = false"
       >
         <i class="fa fa-save"></i>
       </button>
@@ -54,7 +54,7 @@
       <button
         class="btn btn-danger text-light ms-2"
         (click)="removeMonth(billsMonth.id, billsMonth.date)"
-        *ngIf="!monthEdit"
+        *ngIf="monthEdit"
       >
         <i class="fa fa-trash"></i>
       </button>
