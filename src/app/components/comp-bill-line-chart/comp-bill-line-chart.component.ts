@@ -12,6 +12,7 @@ export class CompBillLineChartComponent implements OnInit {
   public billsValues: any = [];
   public billSelected: any = [];
   public total: number = 0;
+  public chartLines: any = [];
 
   constructor(private apiService: ServMovkApiService) {}
 
@@ -29,7 +30,7 @@ export class CompBillLineChartComponent implements OnInit {
   private getBillsList() {
     this.apiService.getData('bills-list/').subscribe((res: any) => {
       this.billsList = res;
-      this.selectBill(res[0].id);
+      this.selectBill(res[2].id);
     });
   }
 
@@ -42,7 +43,6 @@ export class CompBillLineChartComponent implements OnInit {
             value: bill.value,
           };
           this.billSelected.push(itemChart);
-          console.log(this.billSelected);
           this.billsValues.push(bill.value);
         }
       });
@@ -62,15 +62,45 @@ export class CompBillLineChartComponent implements OnInit {
         date: bill.date,
         value: bill.value,
         posX: positionX,
-        posY: 100 - (bill.value * 100) / valMaxOf,
+        posY: (bill.value * 100) / valMaxOf,
+        posTop: posSeparator,
       };
       newBills.push(itemChart);
-      //esse (5 / this.billSelected.length) ajuda a preencher melhor
-      positionX = positionX + posSeparator + 5 / this.billSelected.length;
+      positionX = positionX + posSeparator;
     });
-
     this.billSelected = newBills;
+
+    this.chartLines = [];
+    // this.calcLines();
   }
+
+  // private calcLines() {
+  //   let i = 0;
+  //   let valMax = Math.max.apply(null, this.billsValues);
+  //   for (let res of this.billSelected) {
+  //     let max = Math.max(res.posY, this.billSelected[i + 1].posY);
+  //     let min = Math.min(res.posY, this.billSelected[i + 1].posY);
+  //     let newLine = {
+  //       top: (max - min) / 2 + min,
+  //       left: res.posX,
+  //       width: 100 / this.billSelected.length,
+  //       rotate: this.calcLineDeg(
+  //         res.posY,
+  //         this.billSelected[i + 1].posY,
+  //         valMax
+  //       ),
+  //     };
+  //     i++;
+  //     this.chartLines.push(newLine);
+  //   }
+  //   console.log(this.chartLines);
+  // }
+
+  // private calcLineDeg(val1: number, val2: number, valMax: number) {
+  //   let CA = 100 / this.billSelected.length;
+  //   console.log('max ' + Math.max(val1, val2));
+  //   return 0;
+  // }
 
   private calcTotal() {
     this.total = 0;

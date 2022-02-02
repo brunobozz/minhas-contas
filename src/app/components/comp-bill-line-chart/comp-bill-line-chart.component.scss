@@ -1,72 +1,114 @@
 @import "../../../styles/variables";
 
 .chart {
-  margin-top: 20px;
+  margin-top: 40px;
   position: relative;
-  height: 300px;
+  height: 400px;
 
   &-area1 {
     position: relative;
     z-index: 100;
+    margin-top: 20px;
     height: calc(100% - 30px);
     width: 100%;
     display: flex;
+
     &-a {
       position: relative;
-      background-color: rgba(0, 0, 0, 0.05);
       border-right: 1px solid rgba(0, 0, 0, 0.3);
+      width: 50px;
       height: 100%;
-      width: 30px;
+
+      .item-bar {
+        font-size: 10px;
+        text-align: right;
+        position: absolute;
+        margin-bottom: -15px;
+        padding-right: 5px;
+        height: 30px;
+        right: 0;
+        line-height: 30px;
+        overflow: visible;
+        font-weight: bold;
+        z-index: 200;
+
+        ::after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: -6px;
+          margin-top: -15px;
+          height: 1px;
+          width: 6px;
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        span {
+          white-space: nowrap;
+        }
+      }
     }
+
     &-b {
       position: relative;
-      // overflow: visible;
       height: 100%;
-      width: calc(100% - 30px);
+      width: calc(100% - 50px);
 
       .item-value {
         position: absolute;
         display: block;
-        margin-top: -15px;
-        margin-left: -4px;
-        font-size: 10px;
+        font-size: 12px;
+        font-weight: bold;
 
-        &::before {
-          float: left;
-          margin-right: 5px;
-          margin-top: 12px;
-          height: 8px;
-          width: 8px;
+        text-align: center;
+        border-right: 10px solid #ffffff;
+        border-left: 10px solid #ffffff;
+        bottom: 0;
+        background-color: $primary;
+        transition: all 0.3s ease-in-out;
+        white-space: nowrap;
+
+        span {
+          color: $primary;
           display: block;
-          background-color: $primary;
-          border-radius: 50%;
-          content: "";
+          margin-top: -20px;
         }
       }
     }
   }
   &-area2 {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.05);
     border-top: 1px solid rgba(0, 0, 0, 0.3);
-    width: calc(100% - 29px);
-    margin-left: 29px;
+    width: calc(100% - 49px);
+    margin-left: 49px;
     height: 30px;
 
     .item-month {
       position: absolute;
       font-size: 10px;
       font-weight: bold;
-      margin-left: 5px;
+      z-index: 200;
+      text-align: center;
 
       &::before {
         content: "";
         display: block;
         position: absolute;
-        margin-left: -5px;
-        height: 5px;
+        height: 15px;
         width: 1px;
         background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .chart {
+    &-area1 {
+      &-b {
+        .item-value {
+          font-size: 10px;
+        }
       }
     }
   }

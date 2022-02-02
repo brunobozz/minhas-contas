@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-header bg-primary text-light">
     <i class="fa fa-line-chart"></i>
-    <span> Gráfico por despesa</span>
+    <span> Gráfico de despesa</span>
   </div>
   <div class="card-body">
     <div class="input-group mb-4">
@@ -15,15 +15,31 @@
 
     <div class="chart">
       <div class="chart-area1">
-        <div class="chart-area1-a"></div>
+        <div class="chart-area1-a">
+          <div class="item-bar" style="bottom: 0">
+            <span>R$0.00</span>
+          </div>
+          <div
+            *ngFor="let item of billSelected; let i = index"
+            class="item-bar"
+            [style.bottom]="item.posX + billSelected[1].posX + '%'"
+          >
+            <span>{{
+              (billSelected[billSelected.length - 1].value /
+                billSelected.length) *
+                (i + 1) | currency: "BRL"
+            }}</span>
+          </div>
+        </div>
         <div class="chart-area1-b">
           <div
             *ngFor="let item of billSelected"
             class="item-value"
             [style.left]="item.posX + '%'"
-            [style.top]="item.posY + '%'"
+            [style.width]="100 / this.billSelected.length + '%'"
+            [style.height]="item.posY + '%'"
           >
-            {{ item.value | currency: "BRL" }}
+            <span>{{ item.value | currency: "BRL" }}</span>
           </div>
         </div>
       </div>
@@ -32,6 +48,7 @@
           *ngFor="let item of billSelected"
           class="item-month"
           [style.left]="item.posX + '%'"
+          [style.width]="100 / this.billSelected.length + '%'"
         >
           {{ item.date }}
         </div>
@@ -45,3 +62,23 @@
     <span>{{ total | currency: "BRL" }}</span>
   </div>
 </div>
+
+<script>
+  var canvas = document.getElementById("myCanvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
+    ctx.beginPath(); // Start a new path.
+    ctx.lineWidth = "3";
+    ctx.strokeStyle = "green"; // This path is green.
+    ctx.moveTo(0, 0);
+    ctx.lineTo(160, 160);
+    ctx.lineTo(200, 160);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle = "blue"; // This path is blue.
+    ctx.moveTo(0, 0);
+    ctx.lineTo(50, 170);
+    ctx.stroke();
+    ctx.closePath(); // Close the current path.
+  }
+</script>

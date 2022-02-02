@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class CompMainHeaderComponent {
   public routes: any = [
     {
+      name: 'Home',
+      path: '/home',
+    },
+    {
       name: 'Lista de Despesas',
       path: '/despesas/lista',
     },
