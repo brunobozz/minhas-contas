@@ -474,10 +474,10 @@
       "date": "2022/2",
       "data": [
         {
-          "billId": "7",
+          "billId": "4",
           "value": 2643.89,
           "id": 0,
-          "name": "SC Financiamento"
+          "name": "SC Internet"
         },
         {
           "billId": "2",
@@ -493,6 +493,11 @@
         }
       ],
       "id": 5
+    },
+    {
+      "date": "2023/71",
+      "data": [],
+      "id": 6
     }
   ]
 }
